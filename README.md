@@ -1,4 +1,4 @@
-# skipkayhil.github.io
+# Skipped's Website
 
 The best project ever.
 
@@ -23,5 +23,5 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 _(Nothing yet)_
 
 ## License
-Copyright (c) 2015 SkipKayhil  
+(c) 2015 SkipKayhil  
 Licensed under the GPLv3 license.
