@@ -9,11 +9,13 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     jade: {
       compile: {
-        options: {},
+        options: {
+          pretty: true
+        },
         files: [ {
           cwd: 'src/jade',
           src: '**/*.jade',
-          dest: '/',
+          dest: '',
           expand: true,
           ext: '.html'
         } ]
@@ -52,6 +54,10 @@ module.exports = function(grunt) {
       js: {
         files: ['src/js/*.js'],
         tasks: ['eslint', 'uglify']
+      },
+      jade: {
+        files: ['src/jade/*.jade'],
+        tasks: ['jade']
       },
       livereload: {
           options: {
