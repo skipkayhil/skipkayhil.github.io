@@ -12,3 +12,4 @@ rules:
   no-undef: 1
   no-unused-vars: 1
   no-eq-null: 1
+  no-loop-func: 0

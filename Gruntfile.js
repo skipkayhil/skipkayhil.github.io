@@ -7,29 +7,62 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    nodeunit: {
-      files: ['test/**/*_test.js']
+    jade: {
+      compile: {
+        options: {},
+        files: [ {
+          cwd: 'src/jade',
+          src: '**/*.jade',
+          dest: '/',
+          expand: true,
+          ext: '.html'
+        } ]
+      }
+    },
+    less: {
+      site: {
+        options: {
+          compress: true,
+          cleancss: true
+        },
+        files: {
+          'css/stylesheet.css': 'src/less/stylesheet.less'
+        }
+      }
     },
     eslint: {
         target: []
     },
+    uglify: {
+        production: {
+          options: {
+            mangle: false,
+            soureMap: false
+          },
+          files: {
+            'js/main.js': 'src/js/*.js'
+          }
+        }
+    },
     watch: {
-      gruntfile: {
-        files: '<%= jshint.gruntfile.src %>',
-        tasks: ['jshint:gruntfile']
+      less: {
+        files: ['src/less/*.less'],
+        tasks: ['less']
       },
-      lib: {
-        files: '<%= jshint.lib.src %>',
-        tasks: ['jshint:lib', 'nodeunit']
+      js: {
+        files: ['src/js/*.js'],
+        tasks: ['uglify']
       },
-      test: {
-        files: '<%= jshint.test.src %>',
-        tasks: ['jshint:test', 'nodeunit']
+      livereload: {
+          options: {
+            livereload: true
+          },
+          files: ['css/*', 'js/*', '*.html']
       }
     }
   });
 
   // Default task.
-  grunt.registerTask('default', ['eslint', 'nodeunit']);
+  grunt.registerTask('default', ['eslint']);
 
 };
