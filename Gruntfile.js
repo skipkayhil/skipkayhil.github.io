@@ -26,12 +26,12 @@ module.exports = function(grunt) {
           cleancss: true
         },
         files: {
-          'css/stylesheet.css': 'src/less/stylesheet.less'
+          'css/style.css': 'src/less/style.less'
         }
       }
     },
     eslint: {
-        target: []
+        src: 'src/js/*.js'
     },
     uglify: {
         production: {
@@ -51,7 +51,7 @@ module.exports = function(grunt) {
       },
       js: {
         files: ['src/js/*.js'],
-        tasks: ['uglify']
+        tasks: ['eslint', 'uglify']
       },
       livereload: {
           options: {
