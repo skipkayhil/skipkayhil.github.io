@@ -14,7 +14,7 @@ module.exports = function(grunt) {
         },
         files: [ {
           cwd: 'src/jade',
-          src: '**/*.jade',
+          src: ['**/*.jade', '!src/includes/*.jade'],
           dest: '',
           expand: true,
           ext: '.html'
@@ -56,7 +56,7 @@ module.exports = function(grunt) {
         tasks: ['eslint', 'uglify']
       },
       jade: {
-        files: ['src/jade/*.jade'],
+        files: ['**/*.jade'],
         tasks: ['jade']
       },
       livereload: {
