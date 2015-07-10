@@ -6,6 +6,8 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
+    jadeFiles: ['src/jade/index.jade', 'src/jade/design.jade', 'src/jade/code.jade', 'src/jade/games.jade', 'src/jade/dota.jade', 'src/jade/tf2.jade'],
+
     pkg: grunt.file.readJSON('package.json'),
     jade: {
       compile: {
@@ -14,7 +16,7 @@ module.exports = function(grunt) {
         },
         files: [ {
           cwd: 'src/jade',
-          src: ['**/*.jade', '!src/jade/includes/*.jade'],
+          src: ['*.jade', '!includes/*.jade', '!layout.jade'],
           dest: '',
           expand: true,
           ext: '.html'
@@ -42,7 +44,7 @@ module.exports = function(grunt) {
             soureMap: false
           },
           files: {
-            'js/main.js': 'src/js/*.js'
+            'js/main.min.js': 'src/js/*.js'
           }
         }
     },
@@ -51,9 +53,9 @@ module.exports = function(grunt) {
         files: ['src/less/*.less'],
         tasks: ['less']
       },
-      js: {
+      uglify: {
         files: ['src/js/*.js'],
-        tasks: ['eslint', 'uglify']
+        tasks: ['uglify']
       },
       jade: {
         files: ['**/*.jade'],

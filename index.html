@@ -25,7 +25,18 @@
     <meta name="theme-color" content="#ffffff">
   </head>
   <body>
-    <div style="padding-bottom: 70px; padding-top: 70px;" class="ui inverted vertical footer segment">
+    <div class="ui inverted vertical segment title bar">
+      <div class="ui inverted container">
+        <div class="ui dropdown"><img src="img/icon.svg" width="60" height="60" class="logo">
+          <div class="menu">
+            <div class="item"><img src="img/icon.svg" width="60" height="60"></div>
+            <div class="item"><img src="img/icon.svg" width="60" height="60"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ui inverted center aligned vertical segment header"></div>
+    <div class="ui inverted vertical footer segment">
       <div class="ui divided inverted centered grid container">
         <div class="three wide column">
           <h4 class="ui inverted header">Places</h4>
@@ -35,10 +46,14 @@
           <h4 class="ui inverted header">Games</h4>
           <div class="ui inverted link list"><a href="dota.html" class="item">Dota 2</a><a href="tf2.html" class="item">TF2</a></div>
         </div>
-        <div style="position: relative;" class="ten wide right aligned column">
-          <p style="position:absolute; bottom:0; right:0;">Artist. Programmer. Gamer. <b style="font-size: 35px;"> Skipped </b><img src="img/redicon.svg" width="26" height="26"></p>
+        <div class="ten wide right aligned column">
+          <p>Artist. Programmer. Gamer. <b> Skipped </b><img src="img/icon.svg" class="icon"></p>
         </div>
       </div>
     </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.color.js"></script>
+    <script src="js/semantic.min.js"></script>
+    <script src="js/main.min.js"></script>
   </body>
 </html>

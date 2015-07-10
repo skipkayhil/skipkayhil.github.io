@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    block title
+      title= "Skipped"
+    block style
+      link(rel='stylesheet', href='css/semantic.min.css')
+      link(rel='stylesheet', href='css/style.css')
+    include includes/favicon.jade
+  body
+    div.ui.inverted.vertical.segment.title.bar
+      div.ui.inverted.container
+        div.ui.dropdown
+          img.logo(src='img/icon.svg', width=60, height=60)
+          div.menu
+            div.item
+              img(src='img/icon.svg', width=60, height=60)
+            div.item
+              img(src='img/icon.svg', width=60, height=60)
+    block content
+    include includes/footer.jade
+    script(src='js/jquery.js')
+    script(src='js/jquery.color.js')
+    script(src='js/semantic.min.js')
+    script(src='js/main.min.js')

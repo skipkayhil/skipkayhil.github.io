@@ -27,10 +27,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
-     inkscape:cx="271.00445"
+     inkscape:cx="-150.42412"
      inkscape:cy="614.44947"
      inkscape:document-units="px"
-     inkscape:current-layer="layer3"
+     inkscape:current-layer="layer2"
      showgrid="false"
      units="px"
      inkscape:window-width="1920"
@@ -58,7 +58,8 @@
   <g
      inkscape:groupmode="layer"
      id="layer3"
-     inkscape:label="bg">
+     inkscape:label="bg"
+     style="display:none">
     <rect
        style="display:inline;fill:#bd3b3b;fill-opacity:1;stroke:none;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none"
        id="rect4165"
@@ -74,7 +75,7 @@
      style="display:inline">
     <g
        id="g4171"
-       transform="matrix(8.6799982,0,0,8.6799982,-2242.0532,-4007.3143)"
+       transform="matrix(8.6799982,0,0,8.6799982,-3136.3389,-4005.8857)"
        style="fill:#1b1c1d;fill-opacity:1">
       <rect
          y="516.47626"
@@ -94,20 +95,20 @@
     <g
        id="g4171-6"
        transform="matrix(8.6799982,0,0,8.6799982,-2241.99,-4007.3775)"
-       style="display:inline;fill:#ffffff;fill-opacity:0.89803922">
+       style="display:inline;fill:#ffffff;fill-opacity:1">
       <rect
          y="516.47626"
          x="339.28497"
          height="66.29126"
          width="12.121831"
          id="rect4147-2"
-         style="display:inline;fill:#ffffff;fill-opacity:0.89803922;stroke:none;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none"
+         style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none"
          transform="translate(0,-28.362161)" />
       <path
          inkscape:connector-curvature="0"
          id="path4149-3"
          d="m 283.06371,488.12179 56.09501,33.13952 -56.09588,33.04604 z"
-         style="display:inline;fill:#ffffff;fill-opacity:0.89803922;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         style="display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          sodipodi:nodetypes="cccc" />
     </g>
   </g>
