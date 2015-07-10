@@ -1,12 +1,40 @@
-@skip-red: #bd3b3b;
-@skip-blue: #395c78;
-@skip-yellow: #ef9849;
-@skip-green: #39783f;
+@tf2-red: #bd3b3b;
+@tf2-blue: #395c78;
+@tf2-yellow: #ef9849;
+@tf2-green: #39783f;
+
+.logo{
+    background-color: @tf2-red;
+}
+
+.index.header {
+
+}
+
+.masthead.header {
+  min-height: 600px;
+  align-items: center;
+
+  .container {
+    padding: 112px 0px;
+  }
+
+  h1 {
+    //margin-top: 3em;
+    margin-bottom: 0em;
+    font-size: 4em;
+    font-weight: bold;
+  }
+  .subheader {
+    font-size: 1.25em;
+    font-weight: normal;
+  }
+}
 
 .footer.segment {
   padding: 5em;
-  .icon {
-    background-color: @skip-red;
+
+  .logo {
     width: 26px;
     height: 26px;
   }
@@ -27,8 +55,8 @@
 
 .title.bar {
     padding: 1em 0em;
-    .logo {
-      background-color: @skip-red;
+    .container{
+      height: 60px;
     }
 }
 

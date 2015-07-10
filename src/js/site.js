@@ -3,20 +3,20 @@ $(document).ready(function(){
 
   $('.ui.dropdown').dropdown();
 
-  $('.logo').hover(
+  $('.logo-menu').hover(
     function(){
-      $('.logo')
+      $('.logo-menu')
         .transition('set looping')
         .transition('tada', 750)
     ; },
     function(){
-      $('.logo')
+      $('.logo-menu')
         .transition('stop')
         .transition('remove looping')
     ; }
   );
 
-  $('.logo').click(
+  $('.logo-menu').click(
       function(){
         $('.logo')
           .transition('stop')
@@ -30,10 +30,10 @@ $(document).ready(function(){
 
   function cycleColors() {
     $('.logo').animate({
-      backgroundColor: '#395c78'
+      backgroundColor: '#1D608A'
     }, 5000);
     $('.logo').animate({
-      backgroundColor: '#ef9849'
+      backgroundColor: '#C8C652'
     }, 5000);
     $('.logo').animate({
       backgroundColor: '#bd3b3b'

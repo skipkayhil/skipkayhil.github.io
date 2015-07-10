@@ -8,15 +8,7 @@ html
       link(rel='stylesheet', href='css/style.css')
     include includes/favicon.jade
   body
-    div.ui.inverted.vertical.segment.title.bar
-      div.ui.inverted.container
-        div.ui.dropdown
-          img.logo(src='img/icon.svg', width=60, height=60)
-          div.menu
-            div.item
-              img(src='img/icon.svg', width=60, height=60)
-            div.item
-              img(src='img/icon.svg', width=60, height=60)
+    include includes/header.jade
     block content
     include includes/footer.jade
     script(src='js/jquery.js')
