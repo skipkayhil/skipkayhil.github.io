@@ -1,24 +1,22 @@
 $(document).ready(function(){
   cycleColors();
 
-  $('.ui.dropdown').dropdown();
-
-  $('.logo-menu').hover(
+  $('#logo-menu').hover(
     function(){
-      $('.logo-menu')
+      $('#logo-menu')
         .transition('set looping')
         .transition('tada', 750)
     ; },
     function(){
-      $('.logo-menu')
+      $('#logo-menu')
         .transition('stop')
         .transition('remove looping')
     ; }
   );
 
-  $('.logo-menu').click(
+  $('#logo-menu').click(
       function(){
-        $('.logo')
+        $('#logo-menu')
           .transition('stop')
           .transition('remove looping')
     ; }
@@ -39,4 +37,16 @@ $(document).ready(function(){
       backgroundColor: '#bd3b3b'
     }, 5000);
   }
+
+  $(window).on('scroll', function(){
+
+    // we round here to reduce a little workload
+    stop = Math.round($(window).scrollTop());
+    if (stop > 350) {
+        $('#nav').removeClass('above-main');
+    } else {
+        $('#nav').addClass('above-main');
+    }
+
+});
 });

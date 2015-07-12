@@ -4,19 +4,38 @@
 @tf2-green: #39783f;
 
 .logo{
-    background-color: @tf2-red;
+  background-color: @tf2-red;
 }
 
-.index.header {
-
+#logo-menu {
+  cursor: pointer;
 }
 
-.masthead.header {
+.panel{
+  min-height: 600px;
+  align-items: center;
+}
+
+#nav.above-main {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+#nav {
+  //position: relative;
+  padding: 1em;
+  .container{
+    height: 60px;
+    background-color: inherit;
+  }
+}
+
+#primary {
   min-height: 600px;
   align-items: center;
 
   .container {
-    padding: 112px 0px;
+    padding: 188.5px 0px 238.5px 0px;
   }
 
   h1 {
@@ -31,7 +50,7 @@
   }
 }
 
-.footer.segment {
+#footer {
   padding: 5em;
 
   .logo {
@@ -50,18 +69,5 @@
           font-size: 35px;
       }
     }
-  }
-}
-
-.title.bar {
-    padding: 1em 0em;
-    .container{
-      height: 60px;
-    }
-}
-
-.container {
-  .dropdown {
-    display: inline;
   }
 }
