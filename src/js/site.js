@@ -56,10 +56,10 @@ $(document).ready(function(){
   }
 
   $(window).on('scroll', function(){
-
-    // we round here to reduce a little workload
     stop = Math.round($(window).scrollTop());
-    if (stop > 350) {
+    anchor = $('#anchor-point').offset().top;
+    
+    if (stop > anchor) {
         $('#nav').removeClass('above-main');
     } else {
         $('#nav').addClass('above-main');
