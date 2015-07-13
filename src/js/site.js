@@ -1,5 +1,22 @@
 $(document).ready(function(){
+
+  function setPanelHeight(){
+    var windowHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+    var windowWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    var navHeight = $('#nav').outerHeight();
+
+    $('.panel').css('min-height', windowHeight - navHeight);
+    $('#primary').css('min-height', windowHeight);
+
+    var topMargin = ($('#primary').height() / 2) - $('h1').outerHeight();
+    $('#title-box').css('marginTop', topMargin + 'px');
+
+  }
+
+  window.addEventListener('resize', setPanelHeight());
+
   cycleColors();
+  setPanelHeight();
 
   $('#logo-menu').hover(
     function(){
