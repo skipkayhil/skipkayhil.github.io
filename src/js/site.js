@@ -58,12 +58,11 @@ $(document).ready(function(){
   $(window).on('scroll', function(){
     stop = Math.round($(window).scrollTop());
     anchor = $('#anchor-point').offset().top;
-    
+
     if (stop > anchor) {
         $('#nav').removeClass('above-main');
     } else {
         $('#nav').addClass('above-main');
     }
-
-});
+  });
 });
