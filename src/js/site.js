@@ -13,7 +13,7 @@ $(document).ready(function(){
 
   }
 
-  window.addEventListener('resize', setPanelHeight());
+  $(window).on('resize', setPanelHeight());
 
   cycleColors();
   setPanelHeight();
