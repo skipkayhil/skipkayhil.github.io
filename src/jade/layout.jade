@@ -11,7 +11,7 @@ html
     include includes/header.jade
     block content
     include includes/footer.jade
-    script(src='js/jquery.js')
-    script(src='js/jquery.color.js')
-    script(src='js/semantic.min.js')
+    script(async src='js/jquery.js')
+    script(src='js/jquery.color.js' defer)
+    script(async src='js/semantic.min.js')
     script(src='js/main.min.js')
