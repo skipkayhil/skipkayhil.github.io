@@ -1,0 +1,17 @@
+html, body {
+    margin: 0;
+    padding: 0;
+
+    background: #1B1C1D;
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+i.material-icons {
+    font-size: 100px;
+}
