@@ -1,17 +1,84 @@
 html, body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 
-    background: #1B1C1D;
-    font-family: 'Roboto', sans-serif;
-    height: 100%;
-    color: white;
-    text-align: center;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
+  background: #1B1C1D;
+  font-family: 'Inconsolata', monospace;
+  height: 100%;
+  color: #EEEEEE;
+  text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
 }
 
-i.material-icons {
-    font-size: 100px;
+header {
+  margin: 2vh 0vh;
+}
+
+footer {
+  height: 5.6vh;
+}
+
+/*
+  Font Size:  1
+  Spacing:    .04375
+*/
+
+h1 {
+  font-size: 3.5vh;
+  letter-spacing: .153125vh;
+}
+
+h3 {
+  font-size: 2vh;
+  letter-spacing: .0875vh;
+}
+
+span {
+  font-size: 1.6vh;
+  letter-spacing: .07vh;
+}
+
+a {
+  color: #D0D0D0;
+  font-size: 1.6vh;
+  letter-spacing: .07vh;
+  padding: 0vmin 2vmin;
+}
+
+a:hover {
+  color: white;
+}
+
+a, a:hover {
+  text-decoration: none;
+}
+
+.container {
+  /*
+  container width = 436 when height is 636
+  */
+  max-width: 68.553459vh;
+  display: block;
+}
+
+.row > .left {
+  text-align: left;
+  float: left;
+  width: 33%;
+  font-weight: bold;
+}
+
+.row > .right {
+  text-align: left;
+  width: 66%;
+  float: right;
+  word-wrap: normal;
+}
+
+#name {
+  padding-bottom: 2vh;
 }
