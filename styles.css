@@ -4,6 +4,7 @@ html, body {
 
   background: #1B1C1D;
   font-family: 'Inconsolata', monospace;
+  font-weight: 400;
   height: 100%;
   color: #EEEEEE;
   text-align: center;
@@ -32,6 +33,11 @@ h1 {
   letter-spacing: .153125vh;
 }
 
+h2 {
+  font-size: 2.5vh;
+  letter-spacing: .109375vh;
+}
+
 h3 {
   font-size: 2vh;
   letter-spacing: .0875vh;
@@ -58,25 +64,32 @@ a, a:hover {
 }
 
 .container {
-  /*
-  container width = 436 when height is 636
-  */
-  max-width: 68.553459vh;
-  display: block;
+  /* container width = 422 when height is 636 */
+  max-width: 66.3522vh;
+  /*max-width: 422px;*/
+}
+
+.row {
+  overflow: hidden;
+  padding-bottom: 1.6vh;
 }
 
 .row > .left {
   text-align: left;
   float: left;
-  width: 33%;
+  width: 28.5%;
   font-weight: bold;
 }
 
 .row > .right {
   text-align: left;
-  width: 66%;
+  width: 71.5%;
   float: right;
   word-wrap: normal;
+}
+
+.white {
+  color: #EEEEEE;
 }
 
 #name {
