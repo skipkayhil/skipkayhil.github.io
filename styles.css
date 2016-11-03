@@ -69,6 +69,10 @@ a, a:hover {
   /*max-width: 422px;*/
 }
 
+.container > p {
+  text-align: justify;
+}
+
 .row {
   overflow: hidden;
   padding-bottom: 1.6vh;
