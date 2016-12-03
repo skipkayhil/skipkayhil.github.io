@@ -43,16 +43,19 @@ h3 {
   letter-spacing: .0875vh;
 }
 
-span {
+/*span {
   font-size: 1.6vh;
   letter-spacing: .07vh;
+}*/
+
+header a {
+  padding: 0vmin 2vmin;
 }
 
 a {
   color: #D0D0D0;
   font-size: 1.6vh;
   letter-spacing: .07vh;
-  padding: 0vmin 2vmin;
 }
 
 a:hover {
@@ -61,6 +64,11 @@ a:hover {
 
 a, a:hover {
   text-decoration: none;
+}
+
+p {
+  font-size: 1.65vh;
+  letter-spacing: 0.0721875vh;
 }
 
 .container {
@@ -76,6 +84,10 @@ a, a:hover {
 .row {
   overflow: hidden;
   padding-bottom: 1.6vh;
+}
+
+.project {
+  margin-top: 7vh;
 }
 
 .row > .left {
