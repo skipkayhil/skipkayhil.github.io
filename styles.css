@@ -64,6 +64,7 @@ a:hover {
 
 a, a:hover {
   text-decoration: none;
+  outline: 0;
 }
 
 p {
