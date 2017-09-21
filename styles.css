@@ -1,114 +1,17 @@
 html, body {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 
-  background: #1B1C1D;
-  font-family: 'Inconsolata', monospace;
-  font-weight: 400;
-  height: 100%;
-  color: #EEEEEE;
-  text-align: center;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
-  align-items: center;
-  text-transform: uppercase;
+    background: #1B1C1D;
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
 }
 
-header {
-  margin: 2vh 0vh;
-}
-
-footer {
-  height: 5.6vh;
-}
-
-/*
-  Font Size:  1
-  Spacing:    .04375
-*/
-
-h1 {
-  font-size: 3.5vh;
-  letter-spacing: .153125vh;
-}
-
-h2 {
-  font-size: 2.5vh;
-  letter-spacing: .109375vh;
-}
-
-h3 {
-  font-size: 2vh;
-  letter-spacing: .0875vh;
-}
-
-/*span {
-  font-size: 1.6vh;
-  letter-spacing: .07vh;
-}*/
-
-header a {
-  padding: 0vmin 2vmin;
-}
-
-a {
-  color: #D0D0D0;
-  font-size: 1.6vh;
-  letter-spacing: .07vh;
-}
-
-a:hover {
-  color: white;
-}
-
-a, a:hover {
-  text-decoration: none;
-  outline: 0;
-}
-
-p {
-  font-size: 1.65vh;
-  letter-spacing: 0.0721875vh;
-}
-
-.container {
-  /* container width = 422 when height is 636 */
-  max-width: 66.3522vh;
-  /*max-width: 422px;*/
-}
-
-.container > p {
-  text-align: justify;
-}
-
-.row {
-  overflow: hidden;
-  padding-bottom: 1.6vh;
-}
-
-.project {
-  margin-top: 7vh;
-}
-
-.row > .left {
-  text-align: left;
-  float: left;
-  width: 28.5%;
-  font-weight: bold;
-}
-
-.row > .right {
-  text-align: left;
-  width: 71.5%;
-  float: right;
-  word-wrap: normal;
-}
-
-.white {
-  color: #EEEEEE;
-}
-
-#name {
-  padding-bottom: 2vh;
+i.material-icons {
+    font-size: 100px;
 }
