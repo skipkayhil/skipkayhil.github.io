@@ -1,0 +1,28 @@
+body {
+  background: black;
+  color: white;
+}
+
+.header {
+  text-align: center;
+}
+
+button {
+  color: white;
+  width: 150px;
+  height: 55px;
+  background-position: 100% 0;
+  background-size: 250% 100%;
+  background-image: linear-gradient(
+    120deg,
+    #3d5977 50%,
+    black 50%
+    );
+  transition: background-position .5s linear;
+  transition-timing-function: ease-in-out;
+  border: none;
+}
+
+button:hover {
+  background-position: 0 0;
+}
