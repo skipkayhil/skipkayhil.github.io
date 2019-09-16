@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>404 | Hartley McGuire</title>
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+    <script>
+      window.addEventListener('DOMContentLoaded', () => {
+        if (localStorage.getItem('light') === 'true')
+          document.body.classList.add('light');
+      });
+      function toggleTheme() {
+        localStorage.setItem('light', document.body.classList.toggle('light'));
+      }
+    </script>
+  </head>
+  <body>
+    <main>
+      <h1>404</h1>
+      <p>Page not found. <a href="/">Go back home</a></p>
+    </main>
+    <footer>
+      <a href="#" onclick="toggleTheme();return false;">
+        toggle dark mode
+      </a>
+    </footer>
+  </body>
+</html>
