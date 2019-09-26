@@ -19,7 +19,7 @@
 }
 
 :root {
-  /* Base16 Materia */
+  /* Base16 Default Dark */
   --base00: #181818;
   --base01: #282828;
   --base02: #383838;
@@ -54,8 +54,8 @@ body.light {
   color: #383838;
 }
 
-h2 {
-  padding-top: 1rem;
+article {
+  padding-bottom: 1rem;
 }
 
 a {
@@ -69,10 +69,4 @@ a:not(:hover) {
 ul {
   list-style-type: none;
   padding: 0;
-}
-
-code {
-  background: #383838;
-  padding: 2px 4px;
-  vertical-align: text-bottom;
 }
