@@ -49,6 +49,9 @@ module.exports = {
   plugins: [
     new HTMLWebpackPlugin({ template: "src/index.html" }),
     new MiniCssExtractPlugin({ filename: "[name].[hash:8].css" }),
-    new CleanWebpackPlugin(),
+    new CleanWebpackPlugin({
+      // ignore .git in build folder to keep the git worktree
+      cleanOnceBeforeBuildPatterns: ["**/*", "!.git"],
+    }),
   ],
 };
