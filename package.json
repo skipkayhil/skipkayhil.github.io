@@ -1,44 +1,49 @@
 {
   "name": "skipkayhil.github.io",
   "private": true,
-  "description": "Hartley McGuire's Portfolio Website.",
-  "version": "0.1.0",
+  "description": "Hartley McGuire's Portfolio Website",
+  "version": "1.0.0",
   "author": "Hartley McGuire",
+  "license": "MIT",
+  "scripts": {
+    "dev": "webpack-dev-server --history-api-fallback",
+    "build": "webpack",
+    "postbuild": "env PUPPETEER_PRODUCT=\"firefox\" react-snap",
+    "prod": "cd build && python3 -m http.server 8080",
+    "analyze": "webpack --profile --json > stats.json && webpack-bundle-analyzer stats.json build",
+    "lint": "eslint ."
+  },
+  "reactSnap": {
+    "puppeteerArgs": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox"
+    ],
+    "fixWebpackChunksIssue": false
+  },
   "dependencies": {
-    "gatsby": "^2.15.16",
-    "gatsby-cli": "^2.7.49",
-    "gatsby-image": "^2.2.19",
-    "gatsby-plugin-feed": "^2.3.12",
-    "gatsby-plugin-manifest": "^2.2.16",
-    "gatsby-plugin-react-helmet": "^3.1.7",
-    "gatsby-plugin-sharp": "^2.2.22",
-    "gatsby-remark-copy-linked-files": "^2.1.19",
-    "gatsby-remark-images": "^3.1.22",
-    "gatsby-remark-prismjs": "^3.3.13",
-    "gatsby-remark-responsive-iframe": "^2.2.16",
-    "gatsby-remark-smartypants": "^2.1.8",
-    "gatsby-source-filesystem": "^2.1.22",
-    "gatsby-transformer-remark": "^2.6.22",
-    "gatsby-transformer-sharp": "^2.2.14",
-    "prismjs": "^1.17.1",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "react-helmet": "^5.2.1"
+    "hyperapp": "^2.0.4"
   },
   "devDependencies": {
-    "prettier": "^1.18.2"
-  },
-  "homepage": "https://skipkayhil.github.io",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/skipkayhil/skipkayhil.github.io.git"
-  },
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
+    "@babel/core": "^7.10.2",
+    "@babel/plugin-syntax-jsx": "^7.10.1",
+    "@babel/plugin-transform-react-jsx": "^7.10.1",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-jsx-pragmatic": "^1.0.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.5.3",
+    "cssnano": "^4.1.10",
+    "eslint": "^7.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-react": "^7.20.0",
+    "html-webpack-plugin": "^4.3.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "postcss-loader": "^3.0.0",
+    "prettier": "^2.0.5",
+    "react-snap": "^1.23.0",
+    "webpack": "^4.43.0",
+    "webpack-bundle-analyzer": "^3.8.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
   }
 }
