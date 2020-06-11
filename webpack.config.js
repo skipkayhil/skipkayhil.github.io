@@ -4,6 +4,8 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
+const PnpWebpackPlugin = require(`pnp-webpack-plugin`);
+
 module.exports = {
   mode: process.env.NODE_ENV || "production",
   devtool: "source-map",
@@ -17,7 +19,7 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         include: path.resolve(__dirname, "src"),
-        loader: "babel-loader",
+        loader: require.resolve("babel-loader"),
       },
       {
         test: /\.css$/,
@@ -29,14 +31,14 @@ module.exports = {
             },
           },
           {
-            loader: "css-loader",
+            loader: require.resolve("css-loader"),
             options: {
               importLoaders: 1,
               sourceMap: true,
             },
           },
           {
-            loader: "postcss-loader",
+            loader: require.resolve("postcss-loader"),
             options: {
               ident: "postcss", // https://webpack.js.org/guides/migrating/#complex-options
               plugins: () => [require("cssnano")],
@@ -54,4 +56,14 @@ module.exports = {
       cleanOnceBeforeBuildPatterns: ["**/*", "!.git"],
     }),
   ],
+  resolve: {
+    plugins: [
+      PnpWebpackPlugin,
+    ],
+  },
+  resolveLoader: {
+    plugins: [
+      PnpWebpackPlugin.moduleLoader(module),
+    ],
+  },
 };

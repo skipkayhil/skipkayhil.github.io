@@ -1,5 +1,10 @@
-npm-debug.log*
-node_modules/
+# https://yarnpkg.com/advanced/qa/#which-files-should-be-gitignored
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/pnpify
+!.yarn/versions
+.pnp.*
 
 build/
 stats.json
