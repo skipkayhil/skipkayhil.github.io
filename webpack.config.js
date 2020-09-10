@@ -39,8 +39,9 @@ module.exports = {
           {
             loader: require.resolve("postcss-loader"),
             options: {
-              ident: "postcss", // https://webpack.js.org/guides/migrating/#complex-options
-              plugins: () => [require("cssnano")],
+              postcssOptions: {
+                plugins: [require.resolve("cssnano")],
+              },
             },
           },
         ],
@@ -56,13 +57,14 @@ module.exports = {
     }),
   ],
   resolve: {
-    plugins: [
-      PnpWebpackPlugin,
-    ],
+    plugins: [PnpWebpackPlugin],
   },
   resolveLoader: {
-    plugins: [
-      PnpWebpackPlugin.moduleLoader(module),
-    ],
+    plugins: [PnpWebpackPlugin.moduleLoader(module)],
+  },
+  // These settings will always be false in Webpack 5
+  node: {
+    Buffer: false,
+    process: false,
   },
 };
