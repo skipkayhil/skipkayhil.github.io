@@ -4,8 +4,6 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
-const PnpWebpackPlugin = require(`pnp-webpack-plugin`);
-
 module.exports = {
   mode: process.env.NODE_ENV || "production",
   devtool: "source-map",
@@ -50,21 +48,10 @@ module.exports = {
   },
   plugins: [
     new HTMLWebpackPlugin({ template: "src/index.html" }),
-    new MiniCssExtractPlugin({ filename: "[name].[hash:8].css" }),
+    new MiniCssExtractPlugin({ filename: "[name].[contenthash].css" }),
     new CleanWebpackPlugin({
       // ignore .git in build folder to keep the git worktree
       cleanOnceBeforeBuildPatterns: ["**/*", "!.git"],
     }),
   ],
-  resolve: {
-    plugins: [PnpWebpackPlugin],
-  },
-  resolveLoader: {
-    plugins: [PnpWebpackPlugin.moduleLoader(module)],
-  },
-  // These settings will always be false in Webpack 5
-  node: {
-    Buffer: false,
-    process: false,
-  },
 };
