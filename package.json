@@ -9,17 +9,17 @@
     "dev": "webpack serve --history-api-fallback",
     "build": "webpack && yarn postbuild",
     "postbuild": "env PUPPETEER_PRODUCT=\"firefox\" react-snap",
-    "prod": "serve build",
-    "analyze": "webpack --profile --json > stats.json && webpack-bundle-analyzer stats.json build",
-    "lint": "eslint .",
-    "deploy": "cd build && git add -A && git commit -m 'Deploy to master' && echo 'Run git push origin master to complete deploy'"
+    "prod": "serve docs",
+    "analyze": "webpack --profile --json > stats.json && webpack-bundle-analyzer stats.json docs",
+    "lint": "eslint ."
   },
   "reactSnap": {
     "puppeteerArgs": [
       "--no-sandbox",
       "--disable-setuid-sandbox"
     ],
-    "fixWebpackChunksIssue": false
+    "fixWebpackChunksIssue": false,
+    "source": "docs"
   },
   "dependencies": {
     "hyperapp": "^2.0.4"

@@ -9,8 +9,8 @@ module.exports = {
   devtool: "source-map",
   entry: "./src/index.js",
   output: {
-    filename: "app.[chunkhash:8].js",
-    path: path.resolve(__dirname, "build"),
+    filename: "app.[contenthash].js",
+    path: path.resolve(__dirname, "docs"),
   },
   module: {
     rules: [
