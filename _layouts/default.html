@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      {% if page.title %}
+        {{ page.title }} - {{ site.title }} 
+      {% else %}
+        {{ site.title }}
+      {% endif %}
+    </title>
+    {%- seo title=false -%}
+    <style>
+      body {
+        background: #181818;
+        color: #d8d8d8;
+        font-family: sans-serif;
+        max-width: 70ch;
+        padding: 2ch;
+        margin: auto;
+        line-height: 1.75;
+        text-align: justify;
+      }
+
+      article {
+        padding-bottom: 1rem;
+      }
+
+      a {
+        color: #7cafc2;
+      }
+    </style>
+  </head>
+  <body>
+    {{ content }}
+  </body>
+</html>
