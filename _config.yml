@@ -24,7 +24,7 @@ short_title: hm
 description: >- # this means to ignore newlines until "baseurl:"
   Full Stack developer and Georgia Tech grad working full-time at Shopify
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "skipkayhil.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://skipkayhil.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 github_username: skipkayhil
 
