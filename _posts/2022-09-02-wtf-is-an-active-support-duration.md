@@ -36,7 +36,7 @@ it is important to first look back at how things worked before it was added.
 
 [core_ext]: https://guides.rubyonrails.org/active_support_core_extensions.html
 
-### Core Extension Origins
+## Core Extension Origins
 
 The `Fixnum` Core Extension was first added to Rails in commit [38e55ba][]
 (although in January of 2005 Rails was not actually using git yet). The
