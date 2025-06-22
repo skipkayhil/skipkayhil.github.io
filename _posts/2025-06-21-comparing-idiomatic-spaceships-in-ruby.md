@@ -44,7 +44,7 @@ end
 
 This works well, and its quite concise! However, it does have some downsides...
 
-One downside is that the values in the array are eagerly computed. In the `Die`
+One downside is that the values in the array are eagerly computed. In the Die
 example this isn't a problem because `value` and `faces` are attributes, but
 what if the comparison isn't as straightforward?
 
@@ -71,16 +71,16 @@ end
 ```
 
 This isn't _bad_, but it may perform more work than necessary. If the `value`s
-of the `Die` are different, then the time spent calculating the
+of the Die are different, then the time spent calculating the
 `color_priority`s is wasted because they'll never be used.
 
 Additionally, if comparison is a hotspot, then using `Array#<=>` isn't great
-because it allocates _two arrays_ for each comparison. Bundler used to implement
+because it allocates _two arrays for each comparison_. Bundler used to implement
 a spaceship like this, and I measured that these arrays were 60% of all
 allocations while running `bundle update <gem>` in one of my Rails applications.
 
-I submitted a PR[^2] to remove the allocations by rewriting the spaceship to not
-use arrays:
+I submitted a pull request[^2] to remove the allocations by rewriting the
+spaceship to not use arrays:
 
 ```ruby
 class Bundler::Resolver::Candidate
@@ -98,8 +98,8 @@ some of its simplicity.
 
 ## The Number of Idiomatic Spaceships is `nonzero?`
 
-After my Bundler PR was merged, [nobu][] helpfully shared an even better
-approach: the idiomatic spaceship.
+After my Bundler pull request was merged, [nobu][] helpfully shared an even
+better approach: the idiomatic spaceship.
 
 ```ruby
 class Bundler::Resolver::Candidate
@@ -111,17 +111,18 @@ end
 
 [nobu]: https://github.com/nobu
 
-This version uses `Numeric#nonzero?`, which was actually [implemented][] for
+This version uses [`Numeric#nonzero?`][], which was actually [implemented][] for
 exactly this purpose!
 
+[`Numeric#nonzero?`]: https://docs.ruby-lang.org/en/master/Numeric.html#method-i-nonzero-3F
 [implemented]: https://bugs.ruby-lang.org/issues/9123#note-14
 
 What's interesting about `nonzero?` is that instead of returning `true` or
 `false`, it returns `self` or `nil`. This distinction is the special sauce
 that makes the idiomatic spaceship work.
 
-The first time I tried to remove the array allocations from `Candidate`'s
-spaceship, I tried this
+My first attempt to remove the array allocations from `Candidate`'s spaceship
+did not work:
 
 ```ruby
 class Bundler::Resolver::Candidate
@@ -131,15 +132,15 @@ class Bundler::Resolver::Candidate
 end
 ```
 
-The problem is that this doesn't actually work when the versions are equal,
-because the first `<=>` returns `0`, which is truthy in Ruby (meaning `0 ||
-anything` is `0`). `nonzero?` solves this by turning `0` (and only `0`) into
-`nil` (a falsy value).
+The bug happens when the `version`s are equal: the first `<=>` returns `0`, a
+truthy value in Ruby, so the `||` short circuits. `nonzero?` solves this by
+turning `0` into `nil`, a falsy value, allowing the method to correctly fall
+back to comparing `priority`.
 
 In addition to making spaceships concise and allocation free, `nonzero?` also
 enables lazily evaluating even the most complex spaceships.
 
-Just this week I found a spaceship in a Rails application that looked like this
+Just this week I found a spaceship in a Rails application that looked like this:
 
 ```ruby
 class ClassWithManyFields
