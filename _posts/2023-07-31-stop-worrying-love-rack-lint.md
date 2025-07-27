@@ -1,5 +1,6 @@
 ---
 title: "How I Learned to Stop Worrying and Love Rack::Lint"
+description: A retrospective on a hackathon project I lead to add Rack::Lint to Rails.
 ---
 
 For a recent Hackathon at Shopify, I created the [Rack::Lint on Rails][rl on

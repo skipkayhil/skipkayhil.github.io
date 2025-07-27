@@ -33,7 +33,10 @@ github_username: skipkayhil
 plugins:
   - jekyll-feed
 
-markdown: GFM
+markdown: CommonMark
+commonmark:
+  extensions: [table, strikethrough, autolink, tagfilter]
+  options: [unsafe, footnotes]
 
 # Exclude from processing.
 # The following items will not be processed, by default.
