@@ -9,6 +9,23 @@ blockquote {
   font-style: italic;
 }
 
+blockquote.note {
+  background-color: #2b2e3b;
+  border-color: #9fd5fc;
+  border-radius: 0 4px 4px 0;
+  font-style: normal;
+  padding: 1rem;
+}
+
+blockquote.note::before {
+  color: #9fd5fc;
+  content: "📝 Note";
+}
+
+blockquote.note > p {
+  margin-bottom: 0;
+}
+
 pre, code {
   background: #2b2e3b;
   border: 1px solid #474a58;
