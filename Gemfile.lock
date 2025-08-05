@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/rouge-ruby/rouge.git
+  revision: 327071fe99f3efbe295d3b3a9263c7bec5bdec47
+  specs:
+    rouge (4.6.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -70,7 +76,6 @@ GEM
     rb-inotify (0.11.1)
       ffi (~> 1.0)
     rexml (3.4.1)
-    rouge (4.6.0)
     safe_yaml (1.0.5)
     sass-embedded (1.89.2-x86_64-linux-gnu)
       google-protobuf (~> 4.31)
@@ -89,6 +94,7 @@ DEPENDENCIES
   jekyll-default-layout
   jekyll-feed (~> 0.12)
   jekyll-seo-tag
+  rouge!
   tzinfo (~> 1.2)
   tzinfo-data
   wdm (~> 0.1.1)
