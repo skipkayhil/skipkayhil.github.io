@@ -1,11 +1,38 @@
 ---
 layout: default
 ---
+<style>
+header {
+  display: flex;
+  place-content: space-between;
+  align-items: center;
+}
+
+nav li {
+  display: inline;
+  margin-left: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+</style>
+
 <header>
   <h1>
     <a href="/" class="active">{{ site.title }}</a>
   </h1>
+
+  <nav>
+    <ul>
+      <li>
+        <a href="/blog">blog</a>
+      </li>
+      <li>
+        <a href="/talks">talks</a>
+      </li>
+    </ul>
+  </nav>
 </header>
+
 <main>
   {{ content }}
 </main>

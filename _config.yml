@@ -21,8 +21,7 @@
 title: hartley mcguire
 short_title: hm
 # email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Full Stack developer and Georgia Tech grad working full-time at Shopify
+description: ""
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://skipkayhil.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
@@ -35,8 +34,12 @@ plugins:
 
 markdown: CommonMark
 commonmark:
-  extensions: [table, strikethrough, autolink, tagfilter]
+  extensions: [table, strikethrough, autolink]
   options: [unsafe, footnotes]
+
+collections:
+  talks:
+    output: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.

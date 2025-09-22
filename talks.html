@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<header>
+  <h1>
+    <a href="/">{{ site.short_title }}</a>
+    /
+    <a href="/blog" class="active">talks</a>
+  </h1>
+</header>
+<main>
+  {% for talk in site.talks reversed %}
+    {% assign this_year = talk.date | date: "%Y" %}
+    {% assign next_year = talk.previous.date | date: "%Y" %}
+
+    {% if forloop.first %}
+      <h2>{{ this_year }}</h2>
+      <ul>
+    {% endif %}
+    <li>
+      <a href="{{ talk.url }}">{{ talk.title }}</a>
+      @ {{ talk.event }}
+    </li>
+    {% if forloop.last %}
+      </ul>
+    {% elsif this_year != next_year %}
+      </ul>
+      <h2>{{ next_year }}</h2>
+      <ul>
+    {% endif %}
+  {% endfor %}
+</main>

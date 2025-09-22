@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<header>
+  <h3>
+    <a href="/">{{ site.short_title }}</a>
+    /
+    <a href="/talks">talks</a>
+  </h3>
+</header>
+
+<main>
+  <header>
+    <h1>{{ page.title | escape }}</h1>
+    {%- assign date_format = "%B %-d, %Y" -%}
+    <em>
+      Presented <time datetime="{{ page.date | date_to_xmlschema }}">
+        {{ page.date | date: date_format }}
+      </time> @ {{ page.event }}
+    </em>
+  </header>
+  <article>
+    {{ content }}
+  </article>
+</main>
