@@ -14,11 +14,24 @@ nav li {
   font-size: 1.5rem;
   font-weight: bold;
 }
+
+@media (orientation: landscape) {
+  h1 a.portrait {
+    display: none;
+  }
+}
+
+@media (orientation: portrait) {
+  h1 a.landscape {
+    display: none;
+  }
+}
 </style>
 
 <header>
   <h1>
-    <a href="/" class="active">{{ site.title }}</a>
+    <a href="/" class="active landscape">{{ site.title }}</a>
+    <a href="/" class="active portrait">{{ site.short_title }}</a>
   </h1>
 
   <nav>
