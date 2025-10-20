@@ -21,9 +21,6 @@ group :jekyll_plugins do
   gem "jekyll-seo-tag"
 end
 
-# TODO: back to rubygems once > 4.6.0 is released
-gem "rouge", github: "rouge-ruby/rouge"
-
 gem "webrick"
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
