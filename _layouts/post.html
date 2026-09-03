@@ -38,6 +38,24 @@ code {
   padding: 1px 5px;
 }
 
+code[data-lang]::before {
+  content: attr(data-lang);
+  position: absolute;
+  top: 1px;
+  right: .85rem;
+  transform: translateY(-50%);
+  padding-inline: .3rem;
+  background: #181818;
+  background-color: #2b2e3b;
+  font-size: .7rem;
+  letter-spacing: .05rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  border: 1px solid #474a58;
+  border-radius: 3px;
+  color: #808393;
+}
+
 a > code {
   color: #9fd5fc;
 }
@@ -55,6 +73,7 @@ pre > code {
 
 div.highlight {
   border-radius: 3px;
+  position: relative;
 }
 /*
    base16-rouge (https://github.com/skipkayhil/base16-rouge)
