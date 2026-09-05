@@ -43,7 +43,7 @@ GEM
       jekyll (>= 3.0, < 5.0)
     jekyll-feed (0.17.0)
       jekyll (>= 3.7, < 5.0)
-    jekyll-markly (0.1.0)
+    jekyll-markly (0.1.1)
       jekyll (>= 4.0)
       markly (>= 0.17)
       rouge (>= 3.0)
@@ -99,4 +99,4 @@ DEPENDENCIES
   webrick
 
 BUNDLED WITH
-   4.0.20
+  4.0.20

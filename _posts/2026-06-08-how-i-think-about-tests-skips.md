@@ -165,7 +165,7 @@ class CacheTest < Megatest::Test
 end
 ```
 
-```console
+```console?prompt=$
 # Skip tests that only work with redis
 $ megatest ! :@store=redis
 ```
