@@ -32,7 +32,7 @@ github_username: skipkayhil
 plugins:
   - jekyll-feed
 
-markdown: CommonMark
+markdown: Markly
 commonmark:
   extensions: [table, strikethrough, autolink]
   options: [unsafe, footnotes]
