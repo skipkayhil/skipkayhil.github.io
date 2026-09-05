@@ -38,7 +38,7 @@ class SkipTest < Minitest::Test
 end
 ```
 
-```shell
+```console
 $ ruby test.rb
 Run options: --seed 9367
 
@@ -165,7 +165,7 @@ class CacheTest < Megatest::Test
 end
 ```
 
-```bash
+```console
 # Skip tests that only work with redis
 $ megatest ! :@store=redis
 ```

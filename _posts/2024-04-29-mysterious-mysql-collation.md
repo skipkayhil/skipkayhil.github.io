@@ -118,7 +118,7 @@ environments are identical.
 The last thing to do is fix the `schema.rb` by re-running all migrations with
 the new default collation
 
-```shell
+```console
 $ bin/rails db:reset
 ```
 
