@@ -18,7 +18,7 @@ group :jekyll_plugins do
   gem "jekyll-markly"
   gem "jekyll-default-layout"
   gem "jekyll-feed", "~> 0.12"
-  gem "jekyll-seo-tag"
+  gem "jekyll-seo-tag", "!= 2.9.0" # 2.9.0 replaces og:description with twitter:description for some reason
 end
 
 gem "webrick"
